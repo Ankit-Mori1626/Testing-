@@ -1,5 +1,0 @@
-aws_region       = "ap-south-1"
-project_name     = "k8s-cluster"
-instance_type    = "t3.medium"
-worker_count     = 3
-allowed_ssh_cidr = "0.0.0.0/0"   # recommended: replace with "YOUR_IP/32"

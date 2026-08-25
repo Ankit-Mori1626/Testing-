@@ -113,7 +113,7 @@ Any node's public IP works — Kubernetes NodePort routes the traffic to the rig
 ## Local testing (optional, before touching AWS at all)
 
 ```bash
-docker compose up --build
+docker compose up --build #
 ```
 - Frontend → http://localhost:3000
 - Backend → http://localhost:8000/api/health/

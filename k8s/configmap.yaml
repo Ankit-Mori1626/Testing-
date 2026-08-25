@@ -6,6 +6,6 @@ metadata:
 data:
   DJANGO_DEBUG: "False"
   DJANGO_ALLOWED_HOSTS: "*"
-  POSTGRES_HOST: "database"
+  POSTGRES_HOST: "database-1.cvkyc0o8621q.ap-south-1.rds.amazonaws.com"
   POSTGRES_PORT: "5432"
   CORS_ALLOW_ALL_ORIGINS: "True"

@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ankitmori1626/myapp:latest
+          image: ankitmori1626/myapp-frontend:latest
           ports:
             - containerPort: 80

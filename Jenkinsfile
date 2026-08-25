@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_CREDS     = credentials('ankitmori1626')
+        DOCKERHUB_CREDS     = credentials('Dockerhub')
         DOCKERHUB_USERNAME  = "${DOCKERHUB_CREDS_USR}"
         BACKEND_URL         = "http://13.201.117.17:8000"
         IMAGE_TAG           = "latest"

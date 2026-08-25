@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ankitmori1626/myapp:latest
+          image: ankitmori1626/myapp-backend:latest
           ports:
             - containerPort: 8000
           envFrom:

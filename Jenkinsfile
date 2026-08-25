@@ -23,14 +23,14 @@ pipeline {
 
         stage('Build Backend') {
             steps {
-                sh "docker build -t ${DOCKERHUB_USERNAME}/myapp-backend:${IMAGE_TAG} ./backend"
+                sh "docker build -t ${DOCKERHUB_USERNAME}/k8s-backend:${IMAGE_TAG} ./backend"
             }
         }
 
         stage('Build Frontend') {
             steps {
                 sh """
-                docker build --no-cache -t ${DOCKERHUB_USERNAME}/myapp-frontend:${IMAGE_TAG} \
+                docker build --no-cache -t ${DOCKERHUB_USERNAME}/k8s-frontend:${IMAGE_TAG} \
                   --build-arg REACT_APP_API_URL=${BACKEND_URL} \
                   ./frontend
                 """
@@ -40,8 +40,8 @@ pipeline {
         stage('Push Images') {
             steps {
                 sh """
-                docker push ${DOCKERHUB_USERNAME}/myapp-backend:${IMAGE_TAG}
-                docker push ${DOCKERHUB_USERNAME}/myapp-frontend:${IMAGE_TAG}
+                docker push ${DOCKERHUB_USERNAME}/k8s-backend:${IMAGE_TAG}
+                docker push ${DOCKERHUB_USERNAME}/k8s-frontend:${IMAGE_TAG}
                 """
             }
         }
